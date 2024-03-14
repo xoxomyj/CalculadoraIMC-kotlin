@@ -49,7 +49,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             IMC2Theme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
@@ -154,9 +153,8 @@ fun Greeting() {
                         bottom = 3.dp
                     )
                     )
-
+                    
                 }
-
                 Button(
                     onClick = { /*TODO*/ },
                     modifier = Modifier
@@ -183,33 +181,35 @@ fun Greeting() {
                 .offset(y = -34.dp),
             colors = CardDefaults.cardColors(containerColor = Color(0xff329F6B))
         ) {
-            Row (modifier = Modifier
-                .fillMaxSize()
+            Row(
+                modifier = Modifier
+                    .fillMaxSize()
             ) {
-                Column (modifier = Modifier
-                    .padding(24.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally) {
+                Column(
+                    modifier = Modifier
+                        .padding(24.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
                     Text(modifier = Modifier, text = "Resultado Ideal", color = Color.White)
                     Text(
                         modifier = Modifier,
                         text = "Peso Ideal",
                         color = Color.White,
                         fontWeight = FontWeight.Bold,
-                        fontSize = 22.sp)
+                        fontSize = 22.sp
+                    )
                 }
-                Text(modifier = Modifier.padding(24.dp),
+                Text(
+                    modifier = Modifier.padding(24.dp),
                     text = "21.3",
                     color = Color.White,
                     fontSize = 34.sp
-                    )
+                )
             }
 
-
-
-            }
         }
     }
-
+}
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
